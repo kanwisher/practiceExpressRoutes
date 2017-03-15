@@ -1,0 +1,24 @@
+{
+  "name": "expressroutes",
+  "version": "1.0.0",
+  "description": "Practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanwisher/practiceExpressRoutes.git"
+  },
+  "author": "David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanwisher/practiceExpressRoutes/issues"
+  },
+  "homepage": "https://github.com/kanwisher/practiceExpressRoutes#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}

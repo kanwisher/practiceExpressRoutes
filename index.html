@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pet Search</title>
+<style type="text/css">
+	
+	body  {
+		background: azure;
+		font-family: arial;
+	}
+
+	.heading {
+		text-align: center;
+	}
+
+
+</style>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class=container>
+	<div class=header>
+		<h1 class="heading">Pet Search</h1>
+	</div>
+	<div class="main-body">
+	
+	<input class="input" type="text">
+	<button class="button" type="button">Search</button>
+
+
+	</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+	
+$(".button").on('click', function(){
+	
+	let userInput = $(".input").val().trim();
+
+	$.get("/api/" + userInput, function(data){
+		console.log(data);
+	});
+
+});
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
