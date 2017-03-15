@@ -31,10 +31,15 @@
 	<input class="input" type="text">
 	<button class="button" type="button">Search</button>
 
+	<div class="results">
+	<ul>
+		<li id="name"></li>
+		<li id="color"></li>
+		<li id="age"></li>
+	</ul>
 
-	</div>
-
-</div>
+<button class="button2" type="button" onclick="location.href='/all';">Get all</button>
+<a href="/add"><button class="button3" type="button">Add new character</button></a>
 
 
 
@@ -45,7 +50,9 @@ $(".button").on('click', function(){
 	let userInput = $(".input").val().trim();
 
 	$.get("/api/" + userInput, function(data){
-		console.log(data);
+		$("#name").text(data.name);
+		$("#color").text(data.color);
+		$("#age").text(data.age);
 	});
 
 });

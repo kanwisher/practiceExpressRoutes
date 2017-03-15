@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Pets!</title>
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="content">
+	
+
+</div>
+
+<script type="text/javascript">
+	
+$.get("/api", function(data){
+
+data.forEach(function(value){
+	let newDiv = $("<div>");
+	newDiv.append(value.name + " " + value.color + " " + value.age);
+	$(".content").append(newDiv);
+});
+});
+
+
+
+</script>
+
+
+
+
+</body>
+
+
+
+</html>

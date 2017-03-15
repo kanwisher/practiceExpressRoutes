@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>
+		
+		Add pet!
+	</title>
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+	<input name="name" class="name" type="text" placeholder="Name"></br>
+	<input name="color" class="color" type="text" placeholder="Color"></br>
+	<input name="age" class="age" type="text" placeholder="Age"></br>
+	<button type="button" class="button">Submit</button>
+</form>
+
+
+<script type="text/javascript">
+
+
+
+
+$(".button").on("click", function(){
+
+
+
+var myObject = {
+	name: $(".name").val().trim(),
+	color: $(".color").val().trim(),
+	age: $(".age").val().trim()
+};
+
+console.log(myObject);
+
+
+	$.post("/api/new", myObject)
+	.done(function(){
+		console.log("new pet added!");
+
+	});
+});
+	
+
+</script>
+</body>
+</html>
